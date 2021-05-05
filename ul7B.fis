@@ -9,7 +9,7 @@ AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
 AggMethod='max'
-DefuzzMethod='mom'
+DefuzzMethod='som'
 
 [Input1]
 Name='staining'
