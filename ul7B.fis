@@ -1,0 +1,52 @@
+[System]
+Name='ul7B'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=12
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='mom'
+
+[Input1]
+Name='staining'
+Range=[0 100]
+NumMFs=4
+MF1='none_whatsoever':'trimf',[-33.33 0 33.33]
+MF2='low':'trimf',[0 33.33 66.67]
+MF3='medium':'trimf',[33.33 66.67 100]
+MF4='high':'trimf',[66.67 100 133.3]
+
+[Input2]
+Name='amount'
+Range=[0 7]
+NumMFs=3
+MF1='low':'trimf',[-3.5 -8.327e-17 3.5]
+MF2='mid':'trimf',[0 3.5 7]
+MF3='high':'trimf',[3.5 7 10.5]
+
+[Output1]
+Name='Doutput1'
+Range=[0 70]
+NumMFs=4
+MF1='short':'trimf',[14 15 16]
+MF2='long':'trimf',[44 45 46]
+MF3='extra_long':'trimf',[59 60 61]
+MF4='mid':'trimf',[29 30 31]
+
+[Rules]
+1 1, 1 (1) : 1
+2 1, 1 (1) : 1
+2 2, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 4 (1) : 1
+2 3, 4 (1) : 1
+3 1, 4 (1) : 1
+3 2, 2 (1) : 1
+3 3, 2 (1) : 1
+4 1, 2 (1) : 1
+4 2, 3 (1) : 1
+4 3, 3 (1) : 1
